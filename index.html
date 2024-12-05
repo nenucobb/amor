@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+        <title>PAGINA</title>
+        <body>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: aliceblue;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+
+                #container{
+                    text-align: center;
+                }
+
+                h1{
+                    font-size: 40px;
+                    color: black;
+                }
+
+                #buttons{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                button{
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    font-size: 10px;
+                    color: rgb(0, 0, 0);
+                    background-color: green;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                button:hover{
+                    background-color: rgb(25, 151, 34);
+                }
+
+                #btnNo{
+                    background-color: rgb(165, 1, 1);
+                }
+
+                #btnNo:hover{
+                    background-color: #f44336;
+                }
+
+                img{
+                    margin-top: 30px;
+                    max-width: 100%;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgb(0, 0, 0,0.1);
+                }
+            </style>
+
+            <script>
+                function accionSi(){
+                    alert("YA SOMOS NOVIOS")
+                }
+
+                function moverMouse(){
+                    const width = window.innerWidth;
+                    const height = window.innerHeight;
+
+                    const newWidth = Math.random() * width;
+                    const newHeight = Math.random() * height;
+
+                    const btnNo = document.getElementById("btnNo");
+                    btnNo.style.positionn = "absolute";
+                    btnNo.style.left = newWidth + "px";
+                    btnNo.style.top = newHeight + "px";
+                }
+            </script>
+        </body>
+    </head>
+    <body>
+        <div id="container">
+            <h1>¿QUIERES SER MI NOVIA</h1>
+            <div id="buttons">
+                <button onclick="accionSi()" id="btnSi">Si</button>
+                <button id="btnNo" onmouseover="moverMouse()">NO</button>
+            </div>
+            <img src="uno.png" alt=""  width="400">
+            
+            </div>
+
+            <script>
+                function accionSi(){
+                    const respuesta = confirm("¿SEGURA QUE QUIERES SER MI NOVIA?");
+                    if(respuesta){
+                        window.location.href = "opcionsi.html";
+                    }else{
+                        alert("TE ESPERO");
+                    }
+                }
+
+                function moverMouse(){
+                    const width = window.innerWidth;
+                    const height = window.innerHeight;
+
+                    const newWidth = Math.random() * width;
+                    const newHeight = Math.random() * height;
+
+                    const btnNo = document.getElementById("btnNo");
+                    btnNo.style.position = "absolute";
+                    btnNo.style.left = newWidth + "px";
+                    btnNo.style.top = newHeight + "px";
+
+
+              }
+            </script>
+        </div>
+    </body>
+</html>
